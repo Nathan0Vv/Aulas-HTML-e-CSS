@@ -1,0 +1,258 @@
+<!--(ALT + Z) atv quebra linha-->
+<!--(CTRL + ;) para comentário-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style-ola.css">
+    <title>Olá Mundo!!</title>
+</head>
+
+<body>
+    <header id= "header"> 
+        <a id= "logo" href="olaMundo.html"><img src="./img/terra.jpg" alt="Logo da empresa"></a>
+
+        <button arial-label=" abrir menu" id="btn-mobile" arial-haspopup="true" arial-controls= "menu" arial-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+
+        <ul id="menu" role="menu">
+            <li role="none"><a class="menu-link" role="menuitem" href="./html/olaMundo.html" arial-current="page">Home</a></li>
+            <li role="none"><a class="menu-link" href="./quem-somos.html">Quem Somos</a></li>
+            <li role="none"><a class="menu-link" href="./produtos.html">Produtos</a></li>
+            <li role="none"><a class="menu-link" href="./contato.html">Contato</a></li>
+            <li role="none"><a class="menu-link" href="./videos.html">Vídeos</a></li>
+        </ul>
+    </header>
+
+        <main id="conteudo">
+            <section aria-label="Texto Alternativo" id="hieroglyphs"></section>
+            <!-- Inicio Carrousel -->
+            <section aria-label="Destaque em Banner">
+
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-rise="carousel" data-bs-pause="none">
+                <div class="carousel-inner">
+                    
+                <div class="carousel-item active" data-bs-interval="800">
+                    <img src="./img/banner1.jpg" class="d-block w-100" alt="Imagem do banner 1">
+                </div>
+
+                <div class="carousel-item"
+                    data-bs-interval="600">
+                    <img src="./img/banner2.jfif" class="d-block w-100" alt="Imagem do banner 2">
+                </div>
+
+                <div class="carousel-item"
+                    data-bs-interval="600">    
+                    <img src="./img/banner3.jpg" class="d-block w-100" alt="Imagem do banner 3">
+                </div>
+
+                <div class="carousel-item"
+                    data-bs-interval="600">
+                    <img src="./img/banner4.jpg" class="d-block w-100" alt="Imagem do banner 4">
+                </div>    
+
+                <div class="carousel-item"
+                    data-bs-interval="600">
+                    <img src="./img/banner5.jpg" class="d-block w-100" alt="Imagem do banner 5">
+                </div>
+
+                <button 
+                    class="carousel-control-prev" 
+                    type="button" 
+                    data-bs-target="#carouselExampleInterval" 
+                    data-bs-slide="prev"
+                    arial-label="Anterior">
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>         
+                </button>
+
+                <button 
+                    class="carousel-control-next" 
+                    type="button" 
+                    data-bs-target="#carouselExampleInterval" 
+                    data-bs-slide="next"
+                    arial-label="Próximo">
+
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </section>
+            <!-- Fim Carrousel -->
+            <!-- Inicio Banner -->
+            <section class="section-banner-home" aria-label="Chamada Principal">
+                <div class="container-fluid">
+                    <div class="row m-0">
+                        <div class="col-12 col-md-6"></div>
+                        <figure>
+                            <img src="./img/banner.jpg" alt="Banner: lançamentos de Espaço Naves en 2026" loading="lazy">
+                        </figure>
+                        <div class="col-12 col-md-6">
+                            <section class="texto-banner d-none d-md-block" aria-label="Mensagem Principal">
+                                <h1>Conheça os lançamentos de Espaço Naves em 2026!</h1>
+                                <p class="d-none d-md-block">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dicta hic quidem esse nobis, sunt incidunt eligendi est inventore repudiandae quasi labore quae dolore voluptatibus, alias a obcaecati provident libero?
+                                </p>
+                                <a href="#" aria-label="Saiba mais sobre os lançamentos">Saiba mais...</a>
+                            </section>
+                        </div> 
+                    </div>                      
+                </div>
+            </section>
+            <!-- Fim Banner -->
+            <!-- Inicio Destaques -->
+            <section class="col-6 col-md-2 pr-0">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <header class="col-12">
+                            <h2>Conheça as coleções de Foguetes Históricos</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem iure ullam molestiae quos quod impedit, fugiat, ipsa minima vitae perspiciatis explicabo sapiente fugit qui ducimus optio animi repudiandae, illum cumque.</p>
+                        </header>
+                        <!-- Destaque 01 -->
+                        <div class="col-6 col-md-2 pr-0">
+                            <figure>
+                                <a href="./produtos.html" aria-label="Ver detalhes da Espaço Nave Spirit">
+                                    <img src="./img/destaque-01.jpg" alt="Nave Spirit" width="100%" loading="lazy">
+                                </a>               
+                            </figure>
+                        </div>
+                        <!-- Fim Destaque 01 -->
+                        <!-- Destaque 02 -->
+                        <div class="col-6 col-md-2 pr-0">
+                            <figure>
+                                <a href="./produtos.html" aria-label="Ver detalhes da Espaço Nave Spirit">
+                                    <img src="./img/destaque-02.jfif" alt="Nave Spirit" width="100%" loading="lazy">
+                                </a>               
+                            </figure>
+                        </div>
+                        <!-- Fim Destaque 02 -->
+                        <!-- Destaque 03 -->
+                        <div class="col-6 col-md-2 pr-0">
+                            <figure>
+                                <a href="./produtos.html" aria-label="Ver detalhes da Espaço Nave Spirit">
+                                    <img src="./img/destaque-03.jpg" alt="Nave Spirit" width="100%" loading="lazy">
+                                </a>               
+                            </figure>
+                        </div>
+                        <!-- Fim Destaque 03 -->
+                         <!-- Destaque 04 -->
+                        <div class="col-6 col-md-2 pr-0">
+                            <figure>
+                                <a href="./produtos.html" aria-label="Ver detalhes da Espaço Nave Spirit">
+                                    <img src="./img/destaque-04.jfif" alt="Nave Spirit" width="100%" loading="lazy">
+                                </a>               
+                            </figure>
+                        </div>
+                        <!-- Fim Destaque 04 -->
+                        <!-- Destaque 05 -->
+                        <div class="col-6 col-md-2 pr-0">
+                            <figure>
+                                <a href="./produtos.html" aria-label="Ver detalhes da Espaço Nave Spirit">
+                                    <img src="./img/destaque-05.jpg" alt="Nave Spirit" width="100%" loading="lazy">
+                                </a>               
+                            </figure>
+                        </div>
+                        <!-- Fim Destaque 05 -->
+                         <!-- Destaque 06 -->
+                        <div class="col-6 col-md-2 pr-0">
+                            <figure>
+                                <a href="./produtos.html" aria-label="Ver detalhes da Espaço Nave Spirit">
+                                    <img src="./img/destaque-06.jfif" alt="Nave Spirit" width="100%" loading="lazy">
+                                </a>               
+                            </figure>
+                        </div>
+                        <!-- Fim Destaque 06 -->
+                    </div>
+                </div>
+            </section>
+            <!-- Fim Destaques -->
+            <!-- Inicio Novidades -->
+            <section class="novidades" id="novidades-mobile" aria-label="Novidades">
+                <div class="containter-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <section class="text-body" aria-label="Texto Novidades">
+                                <h2>Conheça as novidades do mundo da Astronomia</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus hic impedit in unde magnam voluptate perferendis atque, quibusdam asperiores neque facilis vitae tempora alias voluptatum sint eum quam perspiciatis consequuntur!    
+                                </p>
+                                <a class="btn-banner" href="#" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+                            </section>
+                        </div>
+                        <div class="col-md-6">
+                            <figure>
+                                <img class="img-fluid" src="img/novidades01.jpg" alt="Banner: Novidades Espaciais" loading="lazy">
+                            </figure>
+                        </div>
+                    </div>                   
+                </div>
+            </section>
+            <!-- Fim Novidades -->
+            <!-- Inicio Galeria -->
+            <section class="galeria d-flex align-itens-center" aria-label="Galeria de Imagens">
+                <div class="container">
+                    <div class="col-12">
+                        <section class="texto-galeria" aria-label="Introdução a galeria">
+                            <h2>Conheça nossa galeria de Relíquias</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aut accusantium, minima fuga excepturi magnam autem sit harum necessitatibus doloribus sint cumque facilis pariatur culpa? Eveniet iure saepe ea inventore.
+                            </p>
+                        </section>
+                    </div>
+                    <!-- Inicio Img 01 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 01 -->
+                    <!-- Inicio Img 02 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 02 -->
+                    <!-- Inicio Img 03 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 03 -->
+                    <!-- Inicio Img 04 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 04 -->
+                    <!-- Inicio Img 05 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 05 -->
+                    <!-- Inicio Img 06 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 06 -->
+                    <!-- Inicio Img 07 -->
+                     <div class="gallery col-6 col-md-3">
+                        <img class="img-fluid" src="img/galeria01.jpg" alt="Imagem Relíquias" loading="lazy">
+                     </div>
+                    <!-- Fim Img 07 -->
+                </div>
+            </section>
+            <!-- Fim Galeria -->
+            <!-- Inicio Zap (botão)-->
+            <aside class="whatsapp" aria-label="Contato rápido via Whatsapp">
+                <div class="container-grid logo-whats">
+                    <a href="https://wa.link/x1zbu1" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no whatsapp">
+                        <img class="pulse" src="img/logo-whats.webp" alt="Ícone Whatsapp">
+                    </a>                
+                </div>
+            </aside>
+            <!-- Fim Zap (botão)-->
+
+        </main>
+</body>
+
+    <script src="./bootstrap/js/bootstrap.min.js"></script>.
+
+</html>

@@ -1,0 +1,96 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#header{
+    background-color: green;
+    height: 100px;
+}
+
+img {
+    height: 100px;
+}
+
+#header a{
+    color: brown;
+    font-size: 20px;
+}
+
+
+#header #logo{
+    left: 100px;
+}
+
+
+
+#conteudo h1{
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#conteudo h2{
+    color: white;
+    background-color: black;
+    font-size: 30px;
+}
+
+#conteudo p {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.carousel-item img {
+    height: 100px;
+    margin: 0px;
+    padding: 150px;
+    height: 100%;
+}
+
+/* Inicio WhatsApp*/
+.whatsapp {
+    position: fixed;
+    top: 400px;
+    right: 20px;
+    z-index: 200;
+}
+.whatsapp img {
+    height: 70px;
+}
+
+/* Inicio Pulse*/
+.whatsapp .pulse {
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse; 
+    animation-name: pulse;
+}
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        -webkit-filter: brightness(100%);
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        -webkit-filter: brightness(110%);
+    }
+    
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    100% {
+        transform: scale(1.1);
+        filter: brightness(110%);
+    }
+}
+/* Fim Pulse*/
+/* Fim WhatsApp*/
