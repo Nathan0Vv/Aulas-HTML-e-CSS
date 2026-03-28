@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrão Reze | Vendas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        body img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .imagem-carros {
+            width: 150px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .imagem-carros img{
+            width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0d0944;
+        }
+
+        .descricao {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 2px solid #000000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {        
+            background-color: #0d0944;
+            color: #fff;
+        }
+
+        td {
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #ffffff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img class="imagem-topo" src="img/logo.png" alt="Corolla">
+
+        <h1>Modelos de carro em Estoque | Vendas</h1>
+        <p class="descricao">
+            Tabelas de veículos disponíveis para venda, com informações sobre marca, modelo, ano e preço. A tabela é organizada por marca, com cada marca listada em uma linha separada. Cada modelo de carro é exibido com uma imagem correspondente, facilitando a visualização dos veículos disponíveis. As informações são apresentadas de forma clara e concisa, permitindo aos clientes comparar facilmente os diferentes modelos e suas características.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-marca">Marca</th>
+                    <th class="col-modelo">Modelo</th>
+                    <th class="col-ano">Ano</th>
+                    <th class="col-marca">Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Carros Toyota-->
+                <tr>
+                    <td rowspan="2">Toyota</td>
+                        <td>                       
+                            <div class="imagem-carros">
+                                <img src="img/corolla.png" alt="">
+                            </div>           
+                            <span>Corolla</span>           
+                        </td>
+                    <td>2020</td>
+                    <td>R$ 80.000,00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imagem-carros">
+                            <img src="img/hilux.png" alt="">
+                        </div>
+                        <span>Hilux</span>
+                    </td>
+                    <td>2020</td>
+                    <td>R$ 80.000,00</td>
+                </tr>
+                
+                <!-- Carros Nissan-->
+                <tr>
+                    <td rowspan="2">Nissan</td>
+                    <td>
+                        <div class="imagem-carros">
+                            <img src="img/sentra.png" alt="">
+                        </div>
+                        <span>Sentra</span>
+                    </td>
+                    <td>2019</td>
+                    <td>R$ 75.000,00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imagem-carros">
+                            <img src="img/versa.webp" alt="">
+                            <span>Versa</span>
+                        </div>
+                    </td>
+                    <td>2019</td>
+                    <td>R$ 75.000,00</td>
+                </tr>
+
+                <!-- Carros Ferrari-->
+                <tr>
+                    <td rowspan="2">Ferrari</td>
+                    <td>
+                        <div class="imagem-carros">
+                            <img src="img/ferrari_gtb.jfif" alt="">
+                            <span>Ferrari 296 GTB</span>
+                        </div>
+                    </td>
+                    <td>2025</td>
+                    <td>R$ 128.000.000,00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imagem-carros">
+                            <img src="img/ferrari_gts.jfif" alt="">
+                            <span>Ferrari 296 GTS</span>
+                        </div>
+                    </td>
+                    <td>2025</td>
+                    <td>R$ 128.000.000,00</td>
+                </tr>
+            </tbody>
+
+    </div>
+</body>
+
+</html>
