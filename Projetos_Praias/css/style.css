@@ -1,0 +1,245 @@
+/* INICIO aula 17/04/26 */
+@import url('https://fonts.googleapis.com');
+
+:root{
+    --areia: #f3e7c9;
+    --espulma: #fffaf1;
+    --oceano: #0a5c78;
+    --oceano-profundo: #073b4c;
+    --turqueza: #16a6b6;
+    --sol: #f5a623;
+    --coral: #eb6f4d;
+    --texto: #13313f;
+    --texto-suave: #4f6c77;
+    --borda: rgba(7,59, 76, 0.12);
+    --sombra: rgba(7, 59, 76, 0.16);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    /*Próxima aula instalarmos fonte com Google API's > Manrope */
+    color: var(--texto);
+    background: radial-gradient(circle  at top right,
+    rgba(245, 166, 35, 0.18), transparent 18%),linear-gradient(180deg, #f6fbfc 0%, #eef7f8 35%, #fff9f5 100%);
+}
+
+img{
+    display: top;
+    width: 100%;
+}
+
+a{
+    color: inherit;
+}
+/* FIM aula 17/04/26 || Nathan Vieira - 240652 */
+
+/*Iremos tratar o CSS as class na próxima aula.*/
+/* INICIO aula 24/04/26 */
+.hero {
+    min-height: 100vh;
+    padding: 1.5rem 6vw 4rem;
+    background: 
+        linear-gradient(135deg, 
+        rgba(7, 59, 0.92),
+        rgba(22, 166, 182, 0.68)),
+        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80") center/cover
+        ;
+        color: white;
+}
+
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    padding: 0.6rem 0.95rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.hero-conteudo {
+    max-width: 720px;
+    padding: 12vh 0 0;
+}
+
+.eyebrow, .rotulo {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.hero, .secao h2, .bloco-guia h3, .dicas h3 {
+    font-family: 'Fraunces', sans-serif;
+}
+
+.hero h1{
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(2.7rem, 6vh, 5.2rem); /* clamp define o tamanho de fonte que escala responsivamente (valor minimo, valor preferencial, valor máximo)*/
+    line-height: 0.95;
+}
+
+.descricao {
+    max-width: 59ch;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.acoes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.botao-primario, .botao-secundario {
+    display: inline-block;
+    padding: 0.95rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.botao-primario {
+    background: var(--sol);
+    color: #08212c;
+}
+
+.botao-secundario {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.secao {
+    padding: 5rem 6vw;
+}
+
+.secao-titulo{
+    max-width: 760px;
+    margin-bottom: 2.4rem;
+}
+
+.secao h2 {
+    margin: 0.35rem 0 0.8rem;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.05;
+}
+
+.secao p :last-child, .card p, .bloco-guia p, .dicas p, .formulario label, .rodape p, li {
+    line-height: 1.7;
+}
+
+.cards, .bloco-guia, .painel-planejamento {
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid var(--borda);
+    border-radius: 28px;
+    box-shadow: var(--sombra);
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card figcaption {
+    padding: 0.8rem 1.4rem 0;
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+}
+
+.card h3, .card p, .card ul, .link-card {
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+}
+
+.card h3 {
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+    font: 1.65rem;
+}
+
+.card ul {
+    padding-left: 1.2rem;
+}
+
+.destaque-texto {
+    color: var(--oceano-profundo);
+}
+
+.link-card {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    font-weight: 700;
+    color: var(--coral);
+}
+
+.guia {
+    background: linear-gradient(180deg, rgba(22, 166, 182, 0.08), rgba(255, 250, 241, 0.7)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.2));
+}
+
+.grade-guia {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.bloco-guia {
+    padding: 1.5rem;
+}
+
+.bloco-guiah h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.35rem;
+}
+
+.destaque-guia {
+    background: linear-gradient(160deg, rgba(10, 92, 120, 0.95) (rgba(22, 166, 182, 0.8))),
+}
+
+.destaque-guia code {
+     color: #ffffff;
+}
+/* FIM aula 24/04/26 || Nathan Vieira - 240652 */
+
+/* Póroxima aula a partir do elemento [ code ]  */
