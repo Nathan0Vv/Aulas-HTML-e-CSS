@@ -56,7 +56,7 @@ a{
         color: white;
 }
 
-menu {
+.menu-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,6 +85,10 @@ menu {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
+}
+
+.menu-links li {
+    margin-bottom: 15px;
 }
 
 .hero-conteudo {
@@ -240,6 +244,268 @@ menu {
 .destaque-guia code {
      color: #ffffff;
 }
-/* FIM aula 24/04/26 || Nathan Vieira - 240652 */
+/* FIM aula 24/04/26 */
 
-/* Póroxima aula a partir do elemento [ code ]  */
+/* INICIO aula 08/05/26 */
+/* Próxima aula a partir do elemento [ code ]  */
+
+code {
+    padding: 0.15rem 0.4rem;
+    border-radius: 8px;
+    background: white;
+    font-family: 'Consolas', monospace;
+}
+
+.painel-planejamento {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.4rem;
+    padding: 1.5rem;
+}
+
+.formulario {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.formulario input, .formulario select, .formulario button {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(7, 59, 76, 0.16);
+    font: inherit;
+}
+
+.formulario input, .formulario select {
+    background: white;
+}
+
+.formulario button {
+    background: var(--oceano);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dicas {
+    padding: 0.4rem 0.4rem 0.4rem 0;
+}
+
+.dicas h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.rodape {
+    padding: 2rem 6vw 3rem;
+    color: var(--texto-suave);
+}
+
+@media (max-width: 980px) {
+    .cards, .grade-guia, .painel-planejamento {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-links {
+        flex-wrap: wrap;
+    }
+
+    .hero-conteudo {
+        padding-top: 4rem;
+    }
+
+    .secao, .hero, .rodape {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+
+/* Segunda página | Grades e Cartões */
+
+.grade-definicoes, .grade-recusos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.card-definicao, .recurso, .quadro-info, .bloco-explicacao {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid var(--borda);
+    border-radius: 28px;
+    box-shadow: var(--sombra);
+}
+
+.card-definicao, .recurso, .bloco-explicacao {
+    padding: 1.5rem;
+}
+
+.card-definicao h3, .recurso h3, .quadro-info h3, .bloco-explicacao h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-family: 'Fraunces. serif';
+    font-size: 1.35rem;
+}
+
+.destaque-definicao {
+    background: linear-gradient(160deg, rgba(235, 111, 77, 0.92), rgba(245, 166, 35, 0.82));
+    color: white;
+}
+
+.destaque-definicao code {
+    color: white;
+}
+
+.secao-suave {
+    background: linear-gradient(180deg, rgba(243, 231, 201, 0.45), rgba(255, 255, 255, 0.4), linear-gradient(90deg, rgba(255, 255, 255, 0.25), rgba(22, 166, 182, 0.05)));
+}
+
+.quadro-info, .painel-duplo {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 1.4rem;
+}
+
+.quadro-info {
+    padding: 1.5rem;
+}
+
+.coluna-info {
+    padding: 0.4rem;
+}
+
+.lista-tags {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+    padding-left: 1.2rem;
+}
+
+/* Segunda página | Tabelas e Formulários */
+
+.formulario-avancado textarea {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(7, 59, 76, 0.16);
+    font: inherit;
+    background: white;
+    resize: vertical;
+}
+
+.grupo-botoes {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.grupo-botoes button {
+    flex: 1 1 120px;
+}
+
+.botao-alternativo {
+    background: var(--coral) !important;
+}
+
+/* Segunda página | Recursos HTML + CSS Avançado */
+
+.painel-detalhes {
+    border: 1px solid rgba(7, 59, 76, 0.14);
+    border-radius: 18px;
+    padding: 1rem 1.1rem;
+    /* Para uso do padding e margin */
+    /* padding: 1 valor (para todos) =  top / right / botton / left */
+    /* padding: 2 valores = top / botton */
+    /* padding: 3 valores =  top / left-right / botton */
+    /* padding: 4 valores (diferentes) =  top / right / botton / left */
+    background: rgba(22, 166, 182, 0.05);
+}
+
+.painel-detalhes summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.bloco-editavel {
+    min-height: 130px;
+    padding: 1rem;
+    border: 2px dashed rgba(10, 92, 120, 0.35);
+    border-radius: 18px;
+    background: rgba(255, 250, 241, 0.8);
+}
+
+.area-drag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cartao-arrastavel, .alvo-drop {
+    min-height: 110px;
+    padding: 1rem;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.cartao-arrastavel {
+    background: linear-gradient(160deg rgba(10, 92, 120, 0.9), rgba(22, 166, 182, 0.75));
+    color: white;
+    cursor: grab;
+}
+
+.cartao-arrastavel.arrastando {
+    opacity: 0.55;
+    cursor: grabbing;
+}
+
+.alvo-drop {
+    border: 2px dashed rgba(235, 111, 77, 0.45);
+    background: rgba(243, 231, 201, 0.55);
+    align-content: start;
+    gap: 0.8rem;
+}
+
+.alvo-drop.drop-ativo {
+    border-color: var(--oceano);
+    background: rgba(22, 166, 182, 0.14);
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+.titulo-drop {
+    margin: 0;
+    font-weight: 700;
+    color: var(--oceano-profundo);
+}
+
+.campo-revisao {
+    width: 100%;
+    padding: 0.95rem;
+    border-radius: 16px;
+    border: 1px solid rgba(7, 59, 76, 0.16);
+    font: inherit;
+}
+
+/* FIM aula 08/05/26 */
+
+/* Continuar construção CSS conforme explicação do enunciado no CANVAS  */
+/* Próxima class a ser tratada > barra-ferramentas */
+/* Rodar JavaScript que gera as páginas 2 e 3 HTML */
+/* 0,5 > Parte 3 > Em sala de aula */
+/* 0,5 > Parte 4 > Finalizar CSS e entrega de PRINTS */
+
+/* Nathan Vieira || RA:240652 */
