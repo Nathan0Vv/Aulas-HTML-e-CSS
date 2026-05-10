@@ -56,7 +56,7 @@ a{
         color: white;
 }
 
-.menu-links {
+.menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -494,17 +494,160 @@ code {
 
 .campo-revisao {
     width: 100%;
-    padding: 0.95rem;
+    padding: 0.95rem 1rem;
     border-radius: 16px;
     border: 1px solid rgba(7, 59, 76, 0.16);
     font: inherit;
+    background: #ffffff;
 }
+
 
 /* FIM aula 08/05/26 */
 
 /* Continuar construção CSS conforme explicação do enunciado no CANVAS  */
 /* Próxima class a ser tratada > barra-ferramentas */
+.menu-demo {
+    display: grid;
+    gap: 1rem;
+}
+
+.menu-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.acao-menu {
+    border: none;
+    border-radius: 999px;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--turquesa);
+    color: #ffffff;
+}
+
+.barra-ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.acao-toolbar {
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.painel-toolbar {
+    border-radius: 20px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--borda);
+}
+
+.painel-toolbar.modo-destaque {
+    background: linear-gradient(160deg, rgba(245, 166, 35, 0.25), rgba(235, 111, 77, 0.18));
+    border-color: rgba(235, 111, 77, 0.45);
+}
+
+.painel-toolbar.modo-compacto {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+}
+
 /* Rodar JavaScript que gera as páginas 2 e 3 HTML */
+
+.hero-midias {
+    background:
+        linear-gradient(135deg, rgba(7, 59, 76, 0.92), rgba(235, 111, 77, 0.65)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+
+.grade-midias {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.bloco-midia {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid var(--borda);
+    border-radius: 28px;
+    box-shadow: var(--sombra);
+    padding: 1.5rem;
+}
+
+.bloco-midia-largo {
+    grid-column: span 2;
+}
+
+audio, video {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 18px;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.bloco-codigo {
+    background: #08212c;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 18px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+}
+
+.nota-midia {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 5px solid var(--sol);
+    background: rgba(245, 166, 35, 0.12);
+    border-radius: 16px;
+}
+
+@media (max-width: 980px) {
+    .grade-definicoes, .grade-recursos, .grade-midias, .painel-duplo {
+        grid-template-columns: 1fr;
+    }
+
+    .bloco-midia-largo {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-links {
+        flex-wrap: wrap;
+    }
+
+    .secao, .hero, .rodape {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+
 /* 0,5 > Parte 3 > Em sala de aula */
 /* 0,5 > Parte 4 > Finalizar CSS e entrega de PRINTS */
 

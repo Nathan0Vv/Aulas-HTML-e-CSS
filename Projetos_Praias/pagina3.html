@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praias do Brasil | Áudios e Vídeos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero hero-midias" id="topo">
+  <nav class="menu" aria-label="Navegação principal">
+    <a class="logo" href="index.html">Praias do Brasil</a>
+
+    <ul class="menu-links">
+      <li><a href="#audios">Áudios</a></li>
+      <li><a href="#videos">Vídeos</a></li>
+      <li><a href="#youtube">YouTube</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-conteudo">
+    <p class="eyebrow">Multimídia no HTML5</p>
+
+    <h1>Terceira página com exemplos de áudio e vídeo</h1>
+
+    <p class="descricao">
+      Esta página mostra como usar as tags de áudio e vídeo
+      utilizando arquivos locais e conteúdo incorporado do YouTube.
+    </p>
+  </section>
+</header>
+
+<main>
+
+  <section class="secao" id="audios">
+    <div class="secao-titulo">
+      <p class="rotulo">Tag audio</p>
+      <h2>Exemplos de áudio</h2>
+    </div>
+
+    <article class="bloco-midia">
+      <h3>Som das ondas</h3>
+
+      <audio controls>
+        <source src="media/ondas.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+    </article>
+
+    <article class="bloco-midia">
+      <h3>Brisa do litoral</h3>
+
+      <audio controls>
+        <source src="media/brisa.mp3" type="audio/ogg">
+        Seu navegador não suporta áudio.
+      </audio>
+    </article>
+  </section>
+
+  <section class="secao secao-suave" id="videos">
+    <div class="secao-titulo">
+      <p class="rotulo">Tag video</p>
+      <h2>Exemplos de vídeo</h2>
+    </div>
+
+    <article class="bloco-midia">
+      <h3>Passeio na praia</h3>
+
+      <video controls width="700">
+        <source src="media/passeio.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </article>
+
+    <article class="bloco-midia">
+      <h3>Mergulho no mar</h3>
+
+      <video controls width="700">
+        <source src="media/mergulho.mp4" type="video/webm">
+        Seu navegador não suporta vídeo.
+      </video>
+    </article>
+  </section>
+
+  <section class="secao" id="youtube">
+    <div class="secao-titulo">
+      <p class="rotulo">Vídeo incorporado</p>
+      <h2>Exemplo usando YouTube</h2>
+    </div>
+
+    <div class="video-embed">
+      <iframe
+        width="900"
+        height="500"
+        src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+        title="Vídeo sobre praias"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <p>Projeto HTML5 - Página 3</p>
+</footer>
+
+</body>
+</html>
+
