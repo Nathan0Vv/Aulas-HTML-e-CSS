@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>Exemplos práticos de Flexbox</h1>
+        <p>Layout unidimensional para organizar elementos em linha ou coluna.</p>
+    </header>
+
+    <main class="container-principal"></main>
+
+    <section class="secao">
+        <h2>1. Container com display: flex</h2>
+        <div class="box exemplo-01">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three<br>has<br>extra<br>text</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>2. flex-direction: row-reverse</h2>
+
+        <div class="box exemplo-02">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>3. flex-direction: column</h2>
+
+        <div class="box exemplo-03">
+            <div>Item A</div>
+            <div>Item B</div>
+            <div>Item C</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>4. flex-wrap: wrap</h2>
+
+        <div class="box exemplo-04">
+            <div>Card 1</div>
+            <div>Card 2</div>
+            <div>Card 3</div>
+            <div>Card 4</div>
+            <div>Card 5</div>
+            <div>Card 6</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>5. justify-content: space-between</h2>
+
+        <div class="box exemplo-05">
+            <div>Início</div>
+            <div>Centro</div>
+            <div>Fim</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>6. align-items: center</h2>
+
+        <div class="box exemplo-06">
+            <div>Baixo</div>
+            <div class="alto">Mais alto</div>
+            <div>Baixo</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>7. gap + flex-grow</h2>
+
+        <div class="box exemplo-07">
+            <div class="item-grow-1">flex-grow: 1</div>
+            <div class="item-grow-2">flex-grow: 2</div>
+            <div class="item-grow-1">flex-grow: 1</div>
+        </div>
+    </section>
+
+    <section class="secao">
+        <h2>8. align-self em um item específico</h2>
+
+        <div class="box exemplo-08">
+            <div>Item 1</div>
+            <div class="especial">align-self: flex-end</div>
+            <div>Item 3</div>
+        </div>
+    </section>
+
+</body>
+</html>
