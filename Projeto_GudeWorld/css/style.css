@@ -1,0 +1,268 @@
+/*
+AF - Avaliação Final - Linguagens de Programação
+Tema do Projeto: Catálogo de Bolinhas de Gude
+Aluno 1: Nathan Vieira - 240652 
+Aluno 2: Gustavo Brasil Bordini - 252212
+Professor: Abimael de Oliveira
+Data de entrega: 07/06
+*/
+
+:root{
+    --cor-primaria:#7E00CC;
+    --cor-secundaria:#5d0099;
+    --cor-clara:#f4f4f4;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    padding-top:70px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    background:#7E00CC;
+}
+
+.titulo-gradiente{
+    background:linear-gradient(90deg,#7E00CC,#c86cff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.area-destaques{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card-personalizado{
+    flex:1 1 300px;
+    transition:.4s;
+}
+
+.card-personalizado:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.card img{
+    transition:.4s;
+}
+
+.card img:hover{
+    transform:scale(1.08);
+}
+
+.btn-roxo{
+    background:#7E00CC;
+    color:white;
+}
+
+.btn-roxo:hover{
+    background:#5d0099;
+    color:white;
+}
+
+.rodape{
+    background:#7E00CC;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+#btnTopo{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    border:none;
+    display:none;
+    padding:15px;
+    border-radius:50%;
+    background:#7E00CC;
+    color:white;
+}
+
+.tema-btn{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    border:none;
+    padding:15px;
+    border-radius:50%;
+}
+
+/* SOBRE NÓS */
+
+.sobre-nos{
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.sobre-nos h2{
+    color: #7E00CC;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sobre-nos h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #7E00CC;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.sobre-nos p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* TEMA ESCURO */ 
+
+.tema-escuro{
+    background-color: #121212;
+    color: white;
+}
+
+.tema-escuro .card{
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #333;
+}
+
+.tema-escuro .sobre-nos{
+    background-color: #1e1e1e;
+}
+
+.tema-escuro .sobre-nos h2{
+    color: white;
+}
+
+.tema-escuro .sobre-nos p{
+    color: white;
+}
+
+.tema-escuro .navbar{
+    background: #5d0099 !important;
+}
+
+.tema-escuro footer{
+    background: #180025;
+}
+
+.tema-escuro .form-control{
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+
+.tema-escuro .form-control:focus{
+    background-color: #333;
+    color: white;
+    border-color: #7E00CC;
+    box-shadow: 0 0 8px rgba(126, 0, 204, 0.5);
+}
+
+.tema-escuro .form-control::placeholder{
+    color: #bdbdbd;
+}
+
+.tema-escuro label{
+    color: white;
+}
+
+
+/* Efeito Hover */
+
+.sobre-nos:hover{
+    transform: translateY(-5px);
+    transition: .3s;
+}
+
+
+/* CAROUSEL */ 
+
+#carouselHome{
+    max-width: 1600px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+#carouselHome .carousel-inner{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}
+
+#carouselHome .carousel-item img{
+    width: 100%; 
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* LEGENDA */
+
+.carousel-caption{
+    bottom: 40px;
+}
+
+.carousel-caption h2{
+    display: inline-block;
+    background: rgba(0,0,0,.65);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.carousel-caption p{
+    display: inline-block;
+    background: rgba(0,0,0,.65);
+    padding: 8px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* SETAS */
+
+.carousel-control-prev,
+.carousel-control-next{
+    width: 8%;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    #carouselHome .carousel-item img{
+        height: 280px;
+    }
+
+    .carousel-caption h2{
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    .carousel-caption p{
+        display:none;
+    }
+}
