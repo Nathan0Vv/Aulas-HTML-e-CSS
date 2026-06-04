@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM - addEventListener</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            background: #0b72b9;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            max-width: 700px;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            user-select: none;
+        }
+
+        h1:hover {
+            background-color: #085a93;
+            transform: scale(1.01);
+        }
+
+        h1:active {
+            transform: scale(0.99);
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .info {
+            margin-top: 24px;
+            background-color: #ebf8ff;
+            border-left: 4px solid #0b72b9;
+            border-radius: 6px;
+            padding: 14px 16px;
+            color: #2b6cb0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #0b72b9;
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <span class="badge">Clique no título abaixo</span>
+
+        <h1>Exemplo 04 - Clique neste título</h1>
+
+        <p>O evento de clique está sendo monitorado com <strong>addEventListener</strong>.</p>
+        <p>Diferente do <code>onclick</code> declarado diretamente na tag HTML, o <strong>addEventListener</strong> é adicionado via JavaScript, separando o comportamento da estrutura HTML.</p>
+
+        <div class="info">
+            <strong>O que está sendo praticado:</strong><br>
+            Uso de <code>addEventListener('click', função)</code> para capturar eventos de clique em elementos HTML sem modificar diretamente a tag.
+        </div>
+    </main>
+
+    <script>
+        // Seleciona o título h1
+        let titulo = document.querySelector('h1');
+
+        // Adiciona o evento de clique usando addEventListener
+        titulo.addEventListener('click', () => {
+            window.alert('Pare de clicar no título!');
+        });
+    </script>
+
+</body>
+</html>

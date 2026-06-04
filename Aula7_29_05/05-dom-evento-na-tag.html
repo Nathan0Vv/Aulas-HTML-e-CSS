@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM - Evento na Tag</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            cursor: pointer;
+        }
+
+        .area {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a202c;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid #0b72b9;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #c05621;
+        }
+
+        code {
+            background-color: #edf2f7;
+            color: #c05621;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        .info {
+            margin-top: 24px;
+            background-color: #fff5f5;
+            border-left: 4px solid #fc8181;
+            border-radius: 6px;
+            padding: 14px 16px;
+            color: #742a2a;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .dica {
+            margin-top: 16px;
+            background-color: #f0fff4;
+            border-left: 4px solid #68d391;
+            border-radius: 6px;
+            padding: 14px 16px;
+            color: #276749;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body onclick="clicou()">
+
+    <main class="area">
+        <h1>Exemplo 05 - Evento diretamente na tag</h1>
+        <p>Clique em qualquer lugar da página.</p>
+        <p>O evento foi declarado no body com <strong>onclick="clicou()"</strong>.</p>
+
+        <div class="info">
+            <strong>O que está sendo praticado:</strong><br>
+            Declaração de eventos diretamente no HTML usando o atributo <code>onclick</code> na tag <code>&lt;body&gt;</code>.
+            Qualquer clique dentro do corpo da página acionará a função <code>clicou()</code>.
+        </div>
+
+        <div class="dica">
+            <strong>Diferença para o addEventListener:</strong><br>
+            Aqui o evento está embutido diretamente na tag HTML. No Exemplo 04, o evento era adicionado via JavaScript puro, separando a lógica da estrutura.
+        </div>
+    </main>
+
+    <script>
+        // Função chamada pelo onclick declarado diretamente na tag <body>
+        function clicou() {
+            window.alert('Você clicou na página!');
+        }
+    </script>
+
+</body>
+</html>

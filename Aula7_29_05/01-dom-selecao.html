@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM - Seletores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a202c;
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid #0b72b9;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            border-left: 4px solid #0b72b9;
+            font-weight: bold;
+        }
+
+        .mensagem {
+            background-color: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 16px;
+            color: #276749;
+            font-size: 0.95rem;
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <h1>Exemplo 01 - Selecionando elementos no DOM</h1>
+
+        <p class="label">Parágrafo com classe:</p>
+        <div>
+            <p class="paragrafo1">Primeiro parágrafo</p>
+        </div>
+
+        <p class="label">Lista de itens:</p>
+        <div>
+            <ul>
+                <li id="item1">Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </div>
+
+        <p class="label">Área de mensagem:</p>
+        <div class="mensagem"></div>
+    </main>
+
+    <script>
+        // 1. Seleciona e exibe o título da página no console
+        let tituloPagina = document.querySelector("title");
+        console.log("Título da página:", tituloPagina.textContent);
+
+        // 2. Altera o texto do parágrafo com a classe .paragrafo1
+        let paragrafoPorClasse = document.querySelector(".paragrafo1");
+        paragrafoPorClasse.textContent = "Parágrafo modificado com querySelector";
+
+        // 3. Altera o primeiro item da lista pelo ID
+        let item = document.querySelector("#item1");
+        item.textContent = "Item 1 modificado pelo ID";
+
+        // 4. Altera o segundo item da lista com querySelectorAll
+        let listaLi = document.querySelectorAll("li");
+        listaLi[1].textContent = "Item 2 modificado com querySelectorAll";
+
+        // 5. Exibe uma mensagem na área de mensagem
+        let mensagem = document.querySelector(".mensagem");
+        mensagem.textContent = "Todos os elementos foram acessados e modificados com JavaScript.";
+    </script>
+
+</body>
+</html>

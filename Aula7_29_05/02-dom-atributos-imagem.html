@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM - Atributos de Imagem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1a202c;
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid #0b72b9;
+        }
+
+        .imagem-container {
+            display: flex;
+            justify-content: center;
+            margin: 24px 0;
+        }
+
+        #foto {
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease;
+            max-width: 100%;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+
+        button {
+            background-color: #0b72b9;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #085a93;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .botao-rotacionar {
+            background-color: #6b46c1;
+        }
+
+        .botao-rotacionar:hover {
+            background-color: #553c9a;
+        }
+
+        .botao-reset {
+            background-color: #c53030;
+        }
+
+        .botao-reset:hover {
+            background-color: #9b2c2c;
+        }
+
+        .info {
+            margin-top: 20px;
+            background-color: #ebf8ff;
+            border-left: 4px solid #0b72b9;
+            border-radius: 6px;
+            padding: 14px 16px;
+            color: #2b6cb0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <h1>Exemplo 02 - Alterando atributos de imagem</h1>
+
+        <div class="imagem-container">
+            <img
+                id="foto"
+                src="https://picsum.photos/200/300"
+                alt="Imagem inicial"
+            >
+        </div>
+
+        <div class="botoes">
+            <button onclick="alterarImagem()">Alterar imagem</button>
+            <button class="botao-rotacionar" onclick="rotacionarImagem()">Rotacionar 90°</button>
+            <button class="botao-reset" onclick="resetarImagem()">Resetar imagem</button>
+        </div>
+
+        <div class="info">
+            <strong>O que está sendo praticado:</strong><br>
+            <code>setAttribute</code>, <code>removeAttribute</code>, alteração de <code>src</code>, <code>alt</code>, <code>width</code> e <code>style.transform</code>.
+        </div>
+    </main>
+
+    <script>
+        // Altera a imagem para tons de cinza e muda seu tamanho
+        function alterarImagem() {
+            let imagem = document.querySelector('#foto');
+
+            imagem.setAttribute('src', 'https://picsum.photos/200/300?grayscale');
+            imagem.setAttribute('alt', 'Imagem alterada para tons de cinza pelo JavaScript');
+            imagem.setAttribute('width', '320');
+        }
+
+        // Rotaciona a imagem 90 graus
+        function rotacionarImagem() {
+            let imagem = document.querySelector('#foto');
+            imagem.style.transform = 'rotate(90deg)';
+        }
+
+        // Reseta a imagem ao estado original
+        function resetarImagem() {
+            let imagem = document.querySelector('#foto');
+
+            imagem.setAttribute('src', 'https://picsum.photos/200/300');
+            imagem.setAttribute('alt', 'Imagem inicial');
+            imagem.removeAttribute('width');
+            imagem.style.transform = 'rotate(0deg)';
+        }
+    </script>
+
+</body>
+</html>

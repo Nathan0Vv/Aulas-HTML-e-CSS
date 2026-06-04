@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM - CSS com JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            max-width: 750px;
+            width: 100%;
+        }
+
+        /* Título principal da demonstração */
+        h1 {
+            color: #1a202c;
+            font-size: 1.5rem;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 3px solid #0b72b9;
+            transition: all 0.3s ease;
+        }
+
+        /* Classe .azul aplicada dinamicamente via JavaScript */
+        .azul {
+            color: white;
+            background-color: #0b72b9;
+            padding: 16px;
+            border-radius: 10px;
+            border-bottom: 5px solid #063b63;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        button {
+            background-color: #0b72b9;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #085a93;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .botao-inline {
+            background-color: #c05621;
+        }
+
+        .botao-inline:hover {
+            background-color: #9c4221;
+        }
+
+        .botao-limpar {
+            background-color: #6b7280;
+        }
+
+        .botao-limpar:hover {
+            background-color: #4b5563;
+        }
+
+        .botao-remover-tudo {
+            background-color: #c53030;
+        }
+
+        .botao-remover-tudo:hover {
+            background-color: #9b2c2c;
+        }
+
+        .info {
+            margin-top: 24px;
+            background-color: #fffff0;
+            border-left: 4px solid #d69e2e;
+            border-radius: 6px;
+            padding: 14px 16px;
+            color: #744210;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <h1>Exemplo 03 - Alterando CSS com JavaScript</h1>
+
+        <div class="botoes">
+            <button class="botao-inline" onclick="alterarEstiloDireto()">
+                Alterar estilo direto inline
+            </button>
+
+            <button onclick="aplicarClasse()">
+                Aplicar classe azul
+            </button>
+
+            <button class="botao-limpar" onclick="removerInline()">
+                Remover apenas inline
+            </button>
+
+            <button class="botao-remover-tudo" onclick="removerTudo()">
+                Remover tudo
+            </button>
+        </div>
+
+        <div class="info">
+            <strong>O que está sendo praticado:</strong><br>
+            Aplicar CSS via <code>style</code> inline, aplicar classe com <code>setAttribute('class', ...)</code>,
+            remover estilo com <code>removeAttribute('style')</code> e <code>removeAttribute('class')</code>.
+        </div>
+    </main>
+
+    <script>
+        // Seleciona o título h1 que será manipulado
+        let titulo = document.querySelector('h1');
+
+        // Aplica estilo diretamente via JavaScript (inline)
+        function alterarEstiloDireto() {
+            titulo.style.color = 'red';
+            titulo.style.backgroundColor = '#000';
+            titulo.style.padding = '16px';
+            titulo.style.borderBottom = 'solid 4px red';
+        }
+
+        // Aplica a classe .azul ao título
+        function aplicarClasse() {
+            titulo.setAttribute('class', 'azul');
+        }
+
+        // Remove apenas o estilo inline (o atributo style="...")
+        function removerInline() {
+            titulo.removeAttribute('style');
+        }
+
+        // Remove tanto a classe quanto o estilo inline
+        function removerTudo() {
+            titulo.removeAttribute('class');
+            titulo.removeAttribute('style');
+        }
+    </script>
+
+</body>
+</html>
